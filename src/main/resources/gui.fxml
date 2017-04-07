@@ -34,7 +34,7 @@
             </VBox>
          </left>
          <right>
-            <TextArea prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+            <TextArea prefHeight="200.0" prefWidth="400.0" promptText="Write stuff here." BorderPane.alignment="CENTER" />
          </right>
          <center>
             <VBox prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER">
