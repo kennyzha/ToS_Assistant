@@ -10,4 +10,4 @@ easily drag a screenshot of the list of players in your current game to the tabl
 name and number. There is also a textfield where you can write down and organize your thoughts outside of the game. When you know a
 role is confirmed you can click on the corresponding role to highlight it and indicate that is is confirmed.
 
-![Alt text](https://github.com/kennyzha/ToS_Assistant/blob/master/src/main/resources/gui_image.png "ToS Assistant")
+![Alt text](/main/resources/gui_image.png "ToS Assistant")
