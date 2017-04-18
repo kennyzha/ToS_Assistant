@@ -68,8 +68,8 @@ public class Controller {
     @FXML
     public void handle(ActionEvent event) {
         Object source = event.getSource();
-        if (source instanceof Button) { //should always be true in your example
-            Button clickedBtn = (Button) source; // that's the button that was clicked
+        if (source instanceof Button) { 
+            Button clickedBtn = (Button) source;
             String btnId = clickedBtn.getId();
 
             if(toggleTracker.containsKey(btnId)){
