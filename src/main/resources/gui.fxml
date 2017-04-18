@@ -10,18 +10,19 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox minWidth="140.0" prefWidth="140.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="jailorButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Jailor" />
-                  <Button fx:id="tiButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Investigative" textFill="#00c800" />
-                  <Button fx:id="tiButton2" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Investigative" textFill="#00c800" />
-                  <Button fx:id="tpButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Protective" />
-                  <Button fx:id="tsButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Support" />
-                  <Button fx:id="tsButton2" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Support" />
+                  <Button fx:id="tiButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Investigative" textFill="#009600" />
+                  <Button fx:id="tiButton2" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Investigative" textFill="#009600" />
+                  <Button fx:id="tpButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Protective" textFill="#009600" />
+                  <Button fx:id="tsButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Support" textFill="#009600" />
+                  <Button fx:id="tsButton2" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Support" textFill="#009600" />
+                  <Button fx:id="tkButton" layoutX="10.0" layoutY="151.0" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Town Killing" textFill="#009600" />
                   <Button fx:id="rtButton" mnemonicParsing="false" onAction="#handle" prefHeight="27.0" prefWidth="140.0" text="Random Town" />
                   <Button fx:id="gfButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Godfather" textFill="RED" />
                   <Button fx:id="mafButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Mafioso" textFill="RED" />
@@ -29,17 +30,17 @@
                   <Button fx:id="nkButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Neutral Killing" textFill="#b2a0a0" />
                   <Button fx:id="neButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Neutral Evil" textFill="#b2a0a0" />
                   <Button fx:id="nbButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Neutral Benign" textFill="#b2a0a0" />
-                  <Button fx:id="anyButton" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="350.0" text="Any" />
+                  <Button fx:id="anyButton" mnemonicParsing="false" onAction="#handle" prefHeight="4.0" prefWidth="140.0" text="Any" />
                </children>
             </VBox>
          </left>
          <right>
-            <TextArea prefHeight="200.0" prefWidth="400.0" promptText="Write stuff here." BorderPane.alignment="CENTER" />
+            <TextArea prefHeight="411.0" prefWidth="400.0" promptText="Write stuff here." BorderPane.alignment="CENTER" />
          </right>
          <center>
             <VBox prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="playerTableView" editable="true" onDragDropped="#mouseDragDropped" onDragOver="#mouseDragOver">
+                  <TableView fx:id="playerTableView" editable="true" minHeight="425.0" minWidth="250.0" onDragDropped="#mouseDragDropped" onDragOver="#mouseDragOver">
                     <columns>
                       <TableColumn fx:id="tableNumCol" prefWidth="50.0" text="#" />
                       <TableColumn fx:id="tableNameCol" minWidth="50.0" prefWidth="100.0" text="Name" />

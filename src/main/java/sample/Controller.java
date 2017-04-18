@@ -100,8 +100,8 @@ public class Controller {
                     System.out.println(file.getAbsolutePath());
                     try {
                         String[] rawPlayerNames = detectText(file.getAbsolutePath(), System.out);
-                        parsePlayerNames(rawPlayerNames);
-                        playerTableView.setItems(getPlayers(rawPlayerNames));
+                        String[] parsedPlayers = parsePlayerNames(rawPlayerNames);
+                        playerTableView.setItems(getPlayers(parsedPlayers));
                     } catch (IOException e1) {
                         e1.printStackTrace();
                     }
@@ -171,7 +171,40 @@ public class Controller {
         return new String[0];
     }
 
-    public String[] parsePlayerNames(String[] rawPlayerNames){
-        return null;
+    public String[] parsePlayerNames(String[] rawPlayerNames)
+    {
+        for(int i = 0; i < rawPlayerNames.length; i++){
+            String[] splitPlayerName = rawPlayerNames[i].split(" ");
+
+            if(isNumericString(splitPlayerName[0])){
+                rawPlayerNames[i] = trimFrontIntegers(rawPlayerNames[i], splitPlayerName[0].length() + 1);
+            }
+        }
+
+        return rawPlayerNames;
+    }
+
+    // only hands positive integers
+    public boolean isNumericString(String s){
+        if(s == null){
+            return false;
+        }
+
+        char[] strCharArr = s.toCharArray();
+
+        if(strCharArr.length == 0){
+            return false;
+        }
+
+        for(int i = 0; i < strCharArr.length; i++){
+            if(strCharArr[i] < '0' || strCharArr[i] > '9'){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String trimFrontIntegers(String playerName, int trimLength){
+        return playerName.substring(trimLength);
     }
 }
